@@ -1,0 +1,139 @@
+/* Cyber theme globals */
+
+/* Grid background subtle */
+@keyframes grid-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Subtle scan effect */
+@keyframes scan-line {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Text glow animation */
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Cyber gradient pulse */
+@keyframes cyber-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+  }
+}
+
+/* Smooth section fade in */
+@keyframes section-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes for animations */
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-cyber-pulse {
+  animation: cyber-pulse 2s ease-in-out infinite;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(10, 10, 18, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.glass-hover {
+  @apply glass transition-all duration-300 hover:border-cyan-glow hover:shadow-glow-sm hover:bg-opacity-80;
+}
+
+/* Tech card styling */
+.tech-card {
+  @apply bg-dark-800 border border-dark-600 rounded-lg p-4 transition-all duration-300 hover:border-cyan-glow hover:shadow-glow-sm;
+}
+
+/* Cyan glow border */
+.glow-border {
+  @apply border-cyan-glow border border-opacity-30;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  @apply transition-all duration-500 ease-out;
+}
+
+/* Text truncate */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Line height modifiers */
+.leading-tight-hero {
+  line-height: 1.2;
+}
+
+/* Responsive padding */
+.px-safe {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* Cyber accent color */
+.accent-cyan {
+  color: #00f0ff;
+}
+
+.accent-green {
+  color: #00ff41;
+}
+
+/* Input focus glow */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00f0ff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
