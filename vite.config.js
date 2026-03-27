@@ -10,5 +10,6 @@ export default defineConfig({
   build: {
     target: 'es2020',
     minify: 'terser'
-  }
+  },
+  base: "https://nolan97666.github.io/portfolio/"
 })
